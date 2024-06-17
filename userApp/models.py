@@ -8,8 +8,7 @@ class User(models.Model):
         unique=True
     )
     password = models.CharField(
-        max_length = 150,
+        max_length = 151,
     )
-    
     def __str__(self): #유저클래스를 문자열로 바꿔야할 있을때
         return self.username #유저클래스를 대표하는 문자열 
