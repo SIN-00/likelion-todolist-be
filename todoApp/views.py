@@ -80,7 +80,7 @@ class TodosFix(APIView):
         else:
             return Response(serializer.errors)
         
-    def delete(self, user_id, todo_id):
+    def delete(self, request, user_id, todo_id):
         todo = self.get_todo(user_id, todo_id)
         todo.delete()
         return Response({'message': '삭제 성공'})
